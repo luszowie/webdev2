@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1 th:text="#{welcome.message}">Cześć</h1>
+    <h3 th:utext="#{welcome.info}">Test</h3>
+    <!--<p th:text="${fName} + ' ' + ${lName}"></p>-->
+    <p th:text="|${fName} - ${lName}|">Andrzej Nowak</p>
+
+
+    <hr>
+
+    <p th:text="|${person.firstName} ${person.lastName}|">Stefan kol</p>
+    <p th:text="${person.phoneNumber}">2222222</p>
+    <p th:text="|Pensja: ${#numbers.formatDecimal(person.salary, 1,2)}|">0000000</p>
+
+
+
+
+
+</body>
+</html>
